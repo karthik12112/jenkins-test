@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             agent any
-            options{
-                skipDefaultcheckout()  
+            options {
+                skipDefaultCheckout()  
             }
             steps {
-                echo "hello world ............" 
+                echo "hello world PPP" 
             }
         }
     }
