@@ -1,13 +1,24 @@
 pipeline {
     agent any
-    options {
-                skipDefaultCheckout()  
-            }
+    environment {
+        version="2.0"
+        name="test"
+    }
     stages {
-        stage('Build') {
-            agent any
+        stage('Build Master') {
+            when{
+              branch 'master'
+            }
             steps {
-                echo "hello world new" 
+                echo "hello "
+            }
+        }
+        stage('Build Dev') {
+            when{
+              branch 'dev'
+            }
+            steps {
+                echo "hello world"
             }
         }
     }
