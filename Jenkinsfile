@@ -7,7 +7,7 @@ pipeline {
                 skipDefaultCheckout()  
             }
             steps {
-                echo "hello world ........" 
+                echo "hello world " 
             }
         }
     }
